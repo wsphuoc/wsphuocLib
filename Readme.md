@@ -11,7 +11,7 @@
 ### wsphuoc.Recaptcha
 - Google ReCaptcha models
 ### Examples
-- Method in controller return all data as Json
+- Return all data as Json
 ```
 [HttpGet]
 public async Task<IActionResult> GetAll()
