@@ -27,6 +27,7 @@ public async Task<IActionResult> GetAll()
 }
 ```
 - Return data with paging as Json
+
 Method in service
 ```
 public async Task<PagedResult<tinhView>> TinhGetPaging(tinhPagingRequest request)
