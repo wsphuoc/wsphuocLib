@@ -26,6 +26,18 @@ public async Task<IActionResult> GetAll()
     return Ok(ErrJson);
 }
 ```
+View model class
+```
+public class tinhView
+{
+    public int id { get; set; }
+    public string ten { get; set; }
+}
+public class tinhPagingRequest:PagingRequestBase
+{
+
+}
+```
 - Return data with paging as Json
 
 Method in service
