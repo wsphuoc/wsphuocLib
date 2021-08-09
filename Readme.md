@@ -11,6 +11,18 @@
 ### wsphuoc.Recaptcha
 - Google ReCaptcha models
 ### Examples
+View model class
+```
+public class tinhView
+{
+    public int id { get; set; }
+    public string ten { get; set; }
+}
+public class tinhPagingRequest:PagingRequestBase
+{
+
+}
+```
 - Return all data as Json
 ```
 [HttpGet]
@@ -24,18 +36,6 @@ public async Task<IActionResult> GetAll()
     }
     var ErrJson = new ApiErrorResult("Cannot read tinh");
     return Ok(ErrJson);
-}
-```
-View model class
-```
-public class tinhView
-{
-    public int id { get; set; }
-    public string ten { get; set; }
-}
-public class tinhPagingRequest:PagingRequestBase
-{
-
 }
 ```
 - Return data with paging as Json
