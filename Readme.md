@@ -27,7 +27,7 @@ public async Task<IActionResult> GetAll()
 }
 ```
 - Return data with paging as Json
--- Method in service
+Method in service
 ```
 public async Task<PagedResult<tinhView>> TinhGetPaging(tinhPagingRequest request)
 {
@@ -49,7 +49,7 @@ public async Task<PagedResult<tinhView>> TinhGetPaging(tinhPagingRequest request
     }
 }
 ```
--- Method in controller return paging data as Json
+Method in controller return paging data as Json
 ```
 [HttpGet("paging")]
 public async Task<IActionResult> GetPaging([FromQuery]tinhPagingRequest request)
