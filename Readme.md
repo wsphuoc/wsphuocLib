@@ -10,7 +10,7 @@
 - Api models
 ### wsphuoc.Recaptcha
 - Google ReCaptcha models
-### Examples
+### HOW TO USE
 View model class
 ```
 public class tinhView
