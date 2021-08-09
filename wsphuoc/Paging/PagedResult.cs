@@ -22,6 +22,7 @@ namespace wsphuoc.Paging
         {
             TotalRecords = data.Count;
             PageSize = pageSize ?? 20;
+            if (PageSize < 0) PageSize = 20;
             PageNums = pageNum ?? 5;
             if (PageNums < 5) PageNums = 5;
             PageIndex = pageIndex ?? 1;
