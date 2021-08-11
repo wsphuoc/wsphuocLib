@@ -9,10 +9,10 @@ namespace wsphuoc.Paging
         public int PageSize { get; set; } = 20; //rows per page
         public int TotalRecords { get; set; } //total rows
         public int PageNums { get; set; } = 5; //page links per page
-        public string FirstText { get; set; } = "&lt;&lt;";
-        public string PreviousText { get; set; } = "&lt;";
-        public string NextText { get; set; } = "&gt;";
-        public string LastText { get; set; } = "&gt;&gt;";
+        public string FirstText { get; set; } = "««";
+        public string PreviousText { get; set; } = "«";
+        public string NextText { get; set; } = "»";
+        public string LastText { get; set; } = "»»";
         public int PageCount //total pages
         {
             get
@@ -53,8 +53,7 @@ namespace wsphuoc.Paging
         {
             get
             {
-                var segment = PageIndex / PageNums;
-                if (PageNums <= 1) segment--;
+                var segment = (PageIndex-1) / PageNums;
                 var beginIndex = segment * PageNums + 1;
                 var endIndex = beginIndex + PageNums - 1;
                 if (endIndex > PageCount) endIndex = PageCount;
